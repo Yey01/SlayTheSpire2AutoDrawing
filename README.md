@@ -1,5 +1,7 @@
 # SlayTheSpire2AutoDrawing 改进版
 
+##特别鸣谢 https://github.com/FugerQingliu/SlayTheSpire2AutoDrawing.git 的项目原型，并改进版只是修改了其原本的图像分析流程，其余功能均为其原版
+
 ## 如何运行
 
 ### 1. 安装依赖
