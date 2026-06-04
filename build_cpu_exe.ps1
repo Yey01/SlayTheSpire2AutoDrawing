@@ -66,7 +66,7 @@ Download-Wheel `
 Download-Wheel `
     -Url "https://download.pytorch.org/whl/cpu/torchvision-0.22.1%2Bcpu-cp313-cp313-win_amd64.whl" `
     -FileName "torchvision-0.22.1+cpu-cp313-cp313-win_amd64.whl" `
-    -ExpectedBytes 1576398
+    -ExpectedBytes 1708165
 
 Invoke-Checked { & $Python -m pip install -r (Join-Path $ProjectRoot "requirements-cpu.txt") --find-links $Wheelhouse --retries 10 --timeout 120 --resume-retries 10 }
 
