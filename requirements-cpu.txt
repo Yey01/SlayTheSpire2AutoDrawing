@@ -1,0 +1,21 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+pyautogui
+keyboard
+opencv-python
+numpy
+pillow
+scikit-image
+onnxruntime
+svgpathtools
+scipy
+scikit-learn
+matplotlib
+aabbtree
+rdp
+colorama
+ndjson
+tqdm
+pyinstaller
+torch==2.7.1+cpu
+torchvision==0.22.1+cpu

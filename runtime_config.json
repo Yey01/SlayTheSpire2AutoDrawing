@@ -1,0 +1,45 @@
+{
+  "backend": {
+    "default_color_path_backend": "onnx_skeleton",
+    "enable_deepsketch": false,
+    "quality_backend": "deepsketch_full"
+  },
+  "onnx_lineart": {
+    "model_path": "models/line_drawing/line-drawings.onnx",
+    "max_side": 900,
+    "enhance": false
+  },
+  "deepsketch": {
+    "repo_path": "models/deepsketch",
+    "model_dir": "models/deepsketch/model",
+    "model_size": "full",
+    "device": "auto",
+    "precision": "medium",
+    "precision_mode": "auto",
+    "precision_presets": {
+      "low": 448,
+      "medium": 512,
+      "high": 600
+    },
+    "gpu_min_viable_side": 448,
+    "cpu_max_time_seconds": 120.0,
+    "max_side": 512,
+    "auto_reduce_on_oom": true,
+    "oom_retry_sides": [448],
+    "target_points": 12000,
+    "max_points": 18000,
+    "max_paths": 1800,
+    "min_path_length": 3.0,
+    "min_point_spacing": 1.0,
+    "simplify_epsilon": 0.8,
+    "sample_step": 3,
+    "use_bezier": true,
+    "save_ordered_paths_json": true,
+    "quality_draw_step": 5,
+    "cache_enabled": true
+  },
+  "debug": {
+    "enabled": false,
+    "keep_last_debug": false
+  }
+}

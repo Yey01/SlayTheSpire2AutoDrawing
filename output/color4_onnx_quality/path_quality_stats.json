@@ -1,0 +1,14 @@
+{
+  "version": 14,
+  "parser": "svgpathtools",
+  "parser_error": null,
+  "use_bezier": true,
+  "sample_step": 1.5,
+  "raw_path_count": 839,
+  "raw_point_count": 34817,
+  "optimized_path_count": 839,
+  "optimized_point_count": 4339,
+  "rdp_epsilon_final": 0.8,
+  "recommended_drag_step": 1,
+  "delay": 0.01
+}

@@ -1,0 +1,39 @@
+{
+  "version": 14,
+  "image_name": "color4",
+  "image_path": "E:/code/painting/color4.jpg",
+  "mode": "quality",
+  "onnx_enabled": false,
+  "created_at": "2026-06-04 11:20:43",
+  "onnx_lineart": {
+    "max_side": 900,
+    "enhance": false,
+    "clean_mode": "balanced"
+  },
+  "deepsketch": {
+    "precision": "high",
+    "model_size": "full",
+    "device": "cuda",
+    "max_side": 448,
+    "auto_reduce_on_oom": true,
+    "oom_retry_sides": [],
+    "target_points": 12000,
+    "max_points": 18000,
+    "max_paths": 1800,
+    "min_path_length": 3.0,
+    "min_point_spacing": 1.0,
+    "simplify_epsilon": 0.8,
+    "sample_step": 1.5,
+    "use_bezier": true,
+    "save_ordered_paths_json": true,
+    "quality_draw_step": 1,
+    "cache_enabled": true,
+    "runtime_resize_to": 448,
+    "runtime_device": "cuda"
+  },
+  "outputs": {
+    "onnx": null,
+    "svg": "deepsketch.svg",
+    "final_paths": "final_paths.png"
+  }
+}

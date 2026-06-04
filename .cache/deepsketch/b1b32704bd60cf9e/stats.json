@@ -1,0 +1,35 @@
+{
+  "parser": "svgpathtools",
+  "raw_paths": 2921,
+  "raw_points": 61953,
+  "target_points": 12000,
+  "max_points": 18000,
+  "max_paths": 1800,
+  "removed_short_paths": 0,
+  "removed_by_path_limit": 1121,
+  "out_of_bounds_points": 0,
+  "rdp_epsilon_final": 0.8,
+  "optimized_paths": 1800,
+  "optimized_points": 9101,
+  "elapsed_deepsketch_sec": 263.7,
+  "elapsed_optimize_sec": 0.1,
+  "elapsed_total_sec": 264.21,
+  "enabled": true,
+  "model_size": "full",
+  "device": "cpu",
+  "runtime_resize_to": 600,
+  "line_raw_shape": [
+    1402,
+    1122
+  ],
+  "svg_size": [
+    1200.0,
+    960.0
+  ],
+  "sample_step": 1.5,
+  "use_bezier": true,
+  "parser_error": null,
+  "raw_path_count": 2921,
+  "raw_point_count": 61953,
+  "cache_hit": false
+}
