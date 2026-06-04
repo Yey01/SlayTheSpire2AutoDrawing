@@ -32,15 +32,24 @@ function Download-Wheel {
         Write-Host "Using cached wheel: $Target"
         return
     }
-    Write-Host "Downloading wheel: $FileName"
-    & curl.exe -L -C - --retry 30 --retry-delay 5 --connect-timeout 60 --speed-time 120 --speed-limit 1024 -o $Target $Url
-    if ($LASTEXITCODE -ne 0) {
-        throw "curl failed with exit code $LASTEXITCODE for $FileName"
+    for ($Attempt = 1; $Attempt -le 40; $Attempt++) {
+        Write-Host "Downloading wheel: $FileName (attempt $Attempt)"
+        & curl.exe -L -C - --retry 10 --retry-delay 5 --connect-timeout 60 --speed-time 180 --speed-limit 1024 -o $Target $Url
+        $ActualBytes = 0
+        if (Test-Path $Target) {
+            $ActualBytes = (Get-Item -LiteralPath $Target).Length
+        }
+        if ($ActualBytes -eq $ExpectedBytes) {
+            return
+        }
+        Write-Host "Partial wheel: $ActualBytes / $ExpectedBytes bytes"
+        Start-Sleep -Seconds 5
     }
-    $ActualBytes = (Get-Item -LiteralPath $Target).Length
-    if ($ActualBytes -ne $ExpectedBytes) {
-        throw "Downloaded wheel size mismatch for $FileName. Expected $ExpectedBytes, got $ActualBytes"
+    $FinalBytes = 0
+    if (Test-Path $Target) {
+        $FinalBytes = (Get-Item -LiteralPath $Target).Length
     }
+    throw "Downloaded wheel size mismatch for $FileName. Expected $ExpectedBytes, got $FinalBytes"
 }
 
 if (-not (Test-Path $Venv)) {
